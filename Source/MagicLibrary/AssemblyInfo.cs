@@ -12,34 +12,8 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-
-[assembly: AssemblyTitle("Magic")]
-[assembly: AssemblyDescription("The User Interface Library for .NET")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Crownwood Consulting Ltd")]
-[assembly: AssemblyProduct("Magic")]
-[assembly: AssemblyCopyright("Copyright 2002-2003 - Crownwood Consulting Ltd")]
 [assembly: AssemblyTrademark("Magic - The User Interface Library for .NET")]
 [assembly: AssemblyCulture("")]		
-
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("2.0.0.0")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 
@@ -70,4 +44,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyKeyFile("")]
 [assembly: AssemblyKeyName("")]
 [assembly: GuidAttribute("aef5bea0-815b-4023-a2bc-d9287e6b3a58")]
-[assembly: AssemblyFileVersionAttribute("1.7.4.2")]
