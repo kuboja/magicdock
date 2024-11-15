@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MagicLibrary  2013">
+</Property><Property Name="Solution File" Value="C:\Projects\Visual Studio 2010\L3_Visual\Magic Library 1.7.4.0\Source\MagicLibrary  2013.sln">
+</Property><Property Name="Date" Value="Wednesday, June 18, 2014">
+</Property><Property Name="Time" Value="14:20 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MagicLibrary  2013.sln" Description="File successfully backed up as C:\Projects\Visual Studio 2010\L3_Visual\Magic Library 1.7.4.0\Source\Backup1\MagicLibrary  2013.sln">
+</Event><Event ErrorLevel="2" Project="MagicLibrary" Source="MagicLibrary.csproj" Description="Unable to open project file to perform upgrade.  ">
+</Event><Event ErrorLevel="0" Project="" Source="MagicLibrary  2013.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MagicLibrary  2013.sln" Description="Converted">
+</Event></UpgradeLog>

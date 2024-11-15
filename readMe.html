@@ -1,0 +1,548 @@
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta name="author" content="Crownwood Consulting Ltd." />
+    <meta name="description" content="Magic, The User Inteface Library for .NET." />
+    <meta name="keywords" content=".NET Framework,DotNet,.NET,magic,gui,docking,dockable,toolbars,menus,components,controls,c,csharp,vb,visual basic,WinForms,Windows Forms" />
+    <meta name="robots" content="all" />
+    <title>Magic - The User Interface Library for .NET - ReadMe</title>
+    <link href="articles/images3/master.css" type="text/css" rel="stylesheet" />
+    <script language="JavaScript" type="text/javascript">
+      <!--Dummy comment to hide code from non-JavaScript browsers.
+
+		if (document.images) 
+		{
+			readme_off = new Image(); readme_off.src = "articles/images3/readme.gif"
+			readme_over = new Image(); readme_over.src = "articles/images3/readme_over.gif"
+			articles_off = new Image(); articles_off.src = "articles/images3/articles.gif"
+			articles_over = new Image(); articles_over.src = "articles/images3/articles_over.gif"
+			bespoke_off = new Image(); bespoke_off.src = "articles/images3/bespoke.gif"
+			bespoke_over = new Image(); bespoke_over.src = "articles/images3/bespoke_over.gif"
+			contact_off = new Image(); contact_off.src = "articles/images3/contact.gif"
+			contact_over = new Image(); contact_over.src = "articles/images3/contact_over.gif"
+		}
+
+		function turn_off(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_off.src");
+			}
+		}
+
+		function turn_over(ImageName) {
+			if (document.images != null) {
+				document[ImageName].src = eval(ImageName + "_over.src");
+			}
+		}
+
+		// End of dummy comment-->
+    </script>
+  </head>
+  <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" class="lightBG">
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" class="lightBG">
+      <tr>
+        <td height="100%" class="lightBG">
+          <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+        <td height="100%" width="750">
+          <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+              <td height="23" class="lightBG">
+                <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="99" class="lightBG">
+                <table width="100%" height="99" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="99" class="pageHeader" valign="bottom">ReadMe</td>
+                    <td height="143" width="362" class="lightBG">
+                      <img src="articles/images3/logo_full.jpg" alt="Magic Logo" height="143" width="362" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%" height="20" class="lightMenu">
+                <table width="100%" height="20" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="lightMenu">
+                      <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                    <td class="lightMenu" height="20" width="52">
+                      <a href="readme.html" onmouseout="turn_off('readme')" onmouseover="turn_over('readme')">
+                        <img name="readme" src="articles/images3/readme.gif" border="0" width="49" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="50">
+                      <a href="articles/articles.html" onmouseout="turn_off('articles')" onmouseover="turn_over('articles')">
+                        <img name="articles" src="articles/images3/articles.gif" border="0" width="47" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="57">
+                      <a href="articles/bespoke.html" onmouseout="turn_off('bespoke')" onmouseover="turn_over('bespoke')">
+                        <img name="bespoke" src="articles/images3/bespoke.gif" border="0" width="54" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" height="20" width="51">
+                      <a href="articles/contact.html" onmouseout="turn_off('contact')" onmouseover="turn_over('contact')">
+                        <img name="contact" src="articles/images3/contact.gif" border="0" width="48" height="20" />
+                      </a>
+                    </td>
+                    <td class="lightMenu" width="3">
+                      <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="100">
+                <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td height="100%" width="125" class="pageBG">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td width="10">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="articles/images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#version">version 1.7</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="articles/images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#new">new features</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="articles/images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#bugfix">bug fixes</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="articles/images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#build">building</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="15" width="18" valign="bottom">
+                                  <img src="articles/images3/rightarrow.gif" height="15" width="18" border="0" />
+                                </td>
+                                <td height="15">
+                                  <a class="sectionHeader" href="#license">license</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="10">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td height="100%" width="625">
+                      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="version">Version 1.7</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+        This release contains two major and one minor addition to the library.<p /><code>WizardControl / WizardDialog</code><br />
+        To speed up the process of creating wizard/configuration style processes the new <i>WizardControl</i> provides
+        much of the basic infrastructure needed. It can be used as an embedded control within any <i>Form</i> you like. The
+        most common usage will be as part of a modal dialog and so the <i>WizardDialog</i> is provided to meet that need.
+        The new sample demonstrates just one of the three different <i>Profiles</i> it provides. Check out the documentation
+        for more details.<p /><code>TabbedGroups</code><br />
+        This new control provides the same functionality as the <i>Tabbed MDI</i> feature found in <i>Visual Studio</i>. You
+        can create a sequence of either vertical or horizontal tab groups that the user can customize. This takes us one step
+        closer to the ultimate goal of <i>Magic</i>, the ability to replicate the look and feel of both <i>OfficeXP</i> and 
+        <i>Visual Studio .NET</i>. Check out the new sample which demonstrates this feature.<p />
+        
+        A smaller but also very useful change is the addition of the <i>Multiline</i> property to the <i>TabControl</i>.
+        
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="new">New features</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <h2>WizardControl</h2>
+            Use this new control to create simple wizard style operations. There are three different
+            profiles to choose from. Each profile controls which  buttons are automatically shown and 
+            the layout of the wizard control presentation. See the new documentation article for more 
+            details and use the 'SampleWizard' for a demonstration.<p /><h2>WizardDialog</h2>
+            Contains an instance on the <i>WizardControl</i> and provides some default implementation. You
+            can use visual inheritance from this <i>Form</i> to speed up the development times. This prevents 
+            needing to create a new 'Form' and embedding a <i>WizardControl</i> instance within it every time 
+            you want to create a new wizard. See documentation for more details.<p /><h2>TabbedGroups</h2>
+            Allows the creation of a vertical or horizontal sequence of groups. The user can create or remove
+            the groups as well as move pages between groups. This can be done either using the appropriate context
+            menu or using drag and drop. See the new sample to see this in operation.<p /><h2>TabControl</h2>
+            Property <i>Multiline</i> has been added but always defaults to false. Note that some other
+            properties will not work when in multiline mode. For example the <i>ShrinkPagesToFit</i> is
+            invalid when presenting multiple lines of tabs.<p />
+            
+            Property <i>MultilineFullWidth</i> has been added and is used when the <i>Multiline</i> property has
+            been defined. By default the last line of tabs does not take up the whole width of the 
+            control. When the property is defined then all the lines of the multiline are stretched to
+            occupy the full width.<p />
+            
+            Proprety <i>IDEPixelTabArea</i> has been added. When in <i>Style.IDE</i> and positioning is at the
+            top a dark line is drawn above the tabs area. When positioning is at the bottom is draws
+            an extra line the same as the control color. This was the default behaviour just using 
+            this new property allows the effect to be turned off.<p />
+            
+            Property <i>BoldSelectedPage</i> has been added. Previously the <i>Appearance.MultiDocument</i> was 
+            always set to have the selected page in bold text and all others did not. This is the 
+            default but you can use this property to override the behaviour as needed.<p />
+            
+            Property <i>ContextPopupMenu</i> has been added and when defined will show the specified popup 
+            menu instance when the tab pages area is right-click by the user. Note that you can still 
+            assign a standard menu to the <i>ContextMenu</i> property which wil also be used if defined. Note 
+            that if you define both then you will end up with two menus being shown in succession.<p />
+
+            Properties <i>HideTabsAlways</i> and <i>HideTabsUsingLogic</i> have been removed and replaced with an 
+            enumeration property called <i>HideTabsMode</i>. Update your code to use the appropriate enum 
+            values of <i>HideTabsModes.HideAlways</i> and <i>HideTabsModes.HideUsingLogic</i>. You can also use 
+            the new <i>HideTabsModes.HideWithoutMouse</i> to have the tabs area show only when the mouse is 
+            over the tab control or any of its pages.<p />
+            
+            Property <i>LeaveTimeout</i> has been added and used in conjunction with the <i>HideTabsModes</i> 
+            property when defined as <i>HideWithoutMouse</i>. This is the delay in milliseconds before the 
+            tabs area is displayed again. <p />
+            
+            Property <i>DragFromControl</i> has been added. By default the control generates page dragging 
+            events when user drags a page outside of the control area. When this property is set to 
+            <i>False</i> then it generates the event sequence when the page is dragged outside the 
+            double-click box from the mouse down position.	<p />	
+            
+            Event <i>SelectionChanging</i> has been added and is fired when a change in selection is about to occur
+            but the <i>SelectedIndex</i> and <i>SelectedTab</i> still retain the old value.<p /><h2>MenuCommand</h2>
+            Property <i>Image</i> has been added and will be used in preference to any <i>ImageList/ImageIndex</i>
+            that might also be defined.<p /><h2>Content</h2>
+            Property <i>FullTitle</i> has been added. This is the text that will be displayed in the caption bar and
+            the existing <i>Title</i> is used as the tab page description. By default the <i>FullText</i> is set to the
+            same value as the <i>Title</i> when the instance is created.<p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="bugfix">Bug fixes</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <h2>TabControl</h2>
+            Adding/Removing tabs did not always update the tabs immediately. Sometimes you needed to 
+            resize the control before the changes became apparent.<p />
+
+            If you used a <i>Form</i> as the content for a <i>TabPage</i> and the property <i>AutoScaleBaseSize</i>
+            was defined then it would not correctly size the <i>Form</i> inside the control until that tab
+            was selected for the second time.<p />
+            
+            When using the <i>Appearance.MultiBox</i> mode and also using <i>HotTrack</i> then tab boxes would not be
+            correctly redrawn when hot tracking leaves them. This has now been corrected.<p />
+            
+            If you had <i>HotTrack</i> or <i>HoverSelect</i> defined and then start a dragging operation it used to
+            still attempt to perform the hot tracking or selection of new items. This has been corrected so that the
+            two properties are ignored when performing a drag as it only confuses the user.<p /><h2>DockingManager</h2>
+            Floating windows would show the caption bar for a docking window when it is the only one
+            inside the floating form. This is fixed to show captions only when two or more exist
+            docking windows are contained inside the floating form.<p />
+            
+            Creating docking content in the floating state would not persist correctly. Instead, when config was saved
+            the docking windows would be moved back into the main application. This has been fixed. <p />
+            
+            Double click a docked window to make it floating and then press the <i>ESC</i> key. This used causes a 
+            nasty crash in yout application but has now been fixed.<p /><h2>MenuControl</h2>
+            When a <i>PopupMenu</i> was showing and you used the keyboard/mouse to navigate to different top 
+            level items the drawing of some items was missed and so left black spaces. <p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="build">Build instructions</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+                                    <h2>Building the samples</h2>
+            Each sample has been written in <i>C#</i> and <i>VB.NET</i>, so you should navigate to the appropriate language 
+            version contained below the <i>Magic Library 1.7\Samples</i> directory. Double click the solution file
+            found and you will be presented with the list of available samples. Righ click the sample application of interest and 
+            select the <i>"Set as StartUp Project"</i> option. Now select the <i>"Debug \ Start"</i> menu option and the 
+            projects will be automatically compiled and the selected sample started.<p /><h2>Building the Magic source code</h2>
+		    Navigate to the <i>Magic Library 1.7\Source</i> directory and you will find a Visual Studio .NET solution 
+		    called <i>MagicLibrary</i>. Double click this solution and you will be presented with a project that includes all
+		    the source code for building an unsigned version of the Magic Library. The output will be placed by default in the
+		    <i>Magic Library 1.7\Bin</i> directory and given the name <i>MagicLocalLibrary.dll</i> to distinguish it from the
+		    official signed version that is in the same location and called <i>MagicLibrary.dll</i>.<p /><h2>Using Magic in your own applications</h2>
+            Either create a new project or load the existing project of interest and right click the <i>References</i> folder.
+            The will present a dialog box with the <i>.NET</i> tab already selected. Navigate down the list of assemblies in 
+            this tab until you find the <i>Magic</i> entry which should then be selected. Your project now has a reference to 
+            the official signed build of <i>Magic</i>. When you decide to distribute your project you will need to also distribute
+            the signed assembly which is contained in the <i>Magic Library 1.7\Bin</i> directory and called <i>MagicLibrary.dll</i>.
+            It is recommended that you add the signed version into the GAC during your own installation process.
+		    
+		</content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentHeader">
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td height="36">
+                            <a name="license">License terms</a>
+                          </td>
+                          <td height="36" width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr class="documentMain">
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                          <td>
+                            <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="documentText">
+                                  <content xmlns="">
+			There is no license fee or royalty fee to be paid at any time for using the 
+			Magic Library. You are however requested to acknowledge the use of the library
+			and provide a link to our home page <i>www.dotnetmagic.com</i> from the 
+			<i>About</i> box of your application.<p />
+			You may include the source code, modified source code, signed assembly or modified 
+			built assembly within your own projects for either personal or commercial use but excluding 
+			the restrictions outlined below.<p />
+			The following restrictions apply to all parts of the library, including all source code, assemblies,
+			samples and documentation...<p /><ul><li>The above items cannot be sold as is, either individually or together.</li><li>The above items cannot be modified and then sold as a library component, either 
+					individually or together.</li></ul>
+			In other words, if you are using the library to enhance your project then you 
+			are fine. If you are trying to gain commercically from the library itself rather 
+			than using it to enhance your own work then you are prohibited from its use.<p />
+			If in any doubt they please contact us at <a href="mailto:license@dotnetmagic.com">
+			license@dotnetmagic.com</a> for a quick determination.<p /></content>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td height="5">
+                                  <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="7">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="15" class="pageBG" colspan="3">
+                            <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td height="23" class="pageBG">
+                <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td class="pageBG">
+                <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+            <tr>
+              <td height="25" align="center" valign="bottom" class="copyright">Copyright 2002 Crownwood Consulting Ltd. All Rights Reserved</td>
+            </tr>
+            <tr>
+              <td height="15" class="lightBG">
+                <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td height="100%" class="lightBG">
+          <img src="articles/images3/spacer.gif" height="1" width="1" border="0" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
