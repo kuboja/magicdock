@@ -9,29 +9,23 @@
 //  Magic Version 1.7	www.dotnetmagic.com
 // *****************************************************************************
 
-using System;
-using System.IO;
-using System.Data;
-using System.Drawing;
-using System.Resources;
-using System.Reflection;
-using System.Collections;
-using System.ComponentModel;
-using System.Windows.Forms;
-using System.Drawing.Drawing2D;
-using Crownwood.Magic.Menus;
-using Crownwood.Magic.Win32;
 using Crownwood.Magic.Common;
-using Crownwood.Magic.Controls;
+using Crownwood.Magic.Menus;
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace SampleMenus
 {
     public class MDIContainer : System.Windows.Forms.Form
     {
-		private int _count = 1;
+        private int _count = 1;
         private ImageList _images = null;
-        private StatusBar _status = null;
-        private StatusBarPanel _statusBarPanel = null;
+        // TODO StatusBar is no longer supported. Use StatusStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/windows-forms/5.0/winforms-deprecated-controls
+        //private StatusBar _status = null;
+        // TODO StatusBarPanel is no longer supported. Use ToolStripStatusLabel instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/windows-forms/5.0/winforms-deprecated-controls
+        //private StatusBarPanel _statusBarPanel = null;
         private Crownwood.Magic.Menus.MenuControl _topMenu = null;
         private System.ComponentModel.Container components = null;
 
@@ -53,8 +47,8 @@ namespace SampleMenus
             // Create a strip of images by loading an embedded bitmap resource
             _images = ResourceHelper.LoadBitmapStrip(this.GetType(),
                                                      "SampleMenus.MenuImages.bmp",
-                                                     new Size(16,16),
-                                                     new Point(0,0));
+                                                     new Size(16, 16),
+                                                     new Point(0, 0));
         }
 
         protected void SetupMenus()
@@ -75,7 +69,7 @@ namespace SampleMenus
             MenuCommand top7 = new MenuCommand("C&ities2");
             MenuCommand top8 = new MenuCommand("Mo&vies2");
             MenuCommand top9 = new MenuCommand("Car&s2");
-            _topMenu.MenuCommands.AddRange(new MenuCommand[]{top1,top2,top3,top4,top5,top6,top7,top8,top9});
+            _topMenu.MenuCommands.AddRange(new MenuCommand[] { top1, top2, top3, top4, top5, top6, top7, top8, top9 });
 
             // Create the submenus
             CreateAppearanceMenu(top1);
@@ -124,7 +118,7 @@ namespace SampleMenus
 
             mc.MenuCommands.AddRange(new MenuCommand[]{style1,style2,style3,style4,style5,style6,
                                                        style7,style8,style9,styleA,styleB,styleC,styleD});
-			
+
         }
 
         protected void CreateWindowsMenu(MenuCommand mc)
@@ -151,7 +145,7 @@ namespace SampleMenus
             window8.Update += new EventHandler(OnLayoutUpdate);
             window9.Update += new EventHandler(OnLayoutUpdate);
             windowA.Update += new EventHandler(OnLayoutUpdate);
-						
+
             mc.MenuCommands.AddRange(new MenuCommand[]{window1,window2,window3,window4,
                                                        window5,window6,window7,window8,
                                                        window9,windowA});
@@ -179,7 +173,7 @@ namespace SampleMenus
             MenuCommand animateD = new MenuCommand("+Hor -Ver", new EventHandler(OnPNSelected));
             MenuCommand animateE = new MenuCommand("-Hor +Ver", new EventHandler(OnNPSelected));
             MenuCommand animateF = new MenuCommand("System", new EventHandler(OnSystemSelected));
-			
+
             // Setup event handlers
             animate1.Update += new EventHandler(OnYesAnimateUpdate);
             animate2.Update += new EventHandler(OnNoAnimateUpdate);
@@ -194,7 +188,7 @@ namespace SampleMenus
             animateD.Update += new EventHandler(OnPNUpdate);
             animateE.Update += new EventHandler(OnNPUpdate);
             animateF.Update += new EventHandler(OnSystemUpdate);
-						
+
             mc.MenuCommands.AddRange(new MenuCommand[]{animate1,animate2,animate3,animate4,
                                                        animate5,animate6,animate7,animate8,
                                                        animate9,animateA,animateB,animateC,
@@ -220,8 +214,8 @@ namespace SampleMenus
             car6.Infrequent = true;
             car5.Infrequent = true;
 
-            mc1.MenuCommands.AddRange(new MenuCommand[]{car1,car2,car3,car4,car5,car6,car7,car8});
-            mc2.MenuCommands.AddRange(new MenuCommand[]{car1,car2,car3,car4,car5,car6,car7,car8});
+            mc1.MenuCommands.AddRange(new MenuCommand[] { car1, car2, car3, car4, car5, car6, car7, car8 });
+            mc2.MenuCommands.AddRange(new MenuCommand[] { car1, car2, car3, car4, car5, car6, car7, car8 });
         }
 
         protected void CreateCityMenus(MenuCommand mc1, MenuCommand mc2)
@@ -244,16 +238,16 @@ namespace SampleMenus
             MenuCommand england3 = new MenuCommand("&Nottingham", _images, 0, new EventHandler(OnGenericSelect));
 
             // Define hierarchy
-            england.MenuCommands.AddRange(new MenuCommand[]{england1,england2,england3});
-            s1.MenuCommands.AddRange(new MenuCommand[]{spain0, spain1, spain2});
-            s2.MenuCommands.AddRange(new MenuCommand[]{canada0, canada1, canada2, england});
-            mc1.MenuCommands.AddRange(new MenuCommand[]{s0, s1, s2, s3, s4});
-            mc2.MenuCommands.AddRange(new MenuCommand[]{s0, s1, s2, s3, s4});
-            
+            england.MenuCommands.AddRange(new MenuCommand[] { england1, england2, england3 });
+            s1.MenuCommands.AddRange(new MenuCommand[] { spain0, spain1, spain2 });
+            s2.MenuCommands.AddRange(new MenuCommand[] { canada0, canada1, canada2, england });
+            mc1.MenuCommands.AddRange(new MenuCommand[] { s0, s1, s2, s3, s4 });
+            mc2.MenuCommands.AddRange(new MenuCommand[] { s0, s1, s2, s3, s4 });
+
             // Change default properties of some items
             spain0.Infrequent = true;
             spain1.Infrequent = true;
-			
+
             // Setup the left column details
             england.MenuCommands.ExtraText = "English";
             england.MenuCommands.ExtraTextColor = Color.White;
@@ -270,9 +264,9 @@ namespace SampleMenus
             mc1.MenuCommands.ExtraText = "Countries";
             mc1.MenuCommands.ExtraTextColor = Color.White;
             mc1.MenuCommands.ExtraBackColor = Color.SlateGray;
-            mc1.MenuCommands.ExtraFont = new Font("Times New Roman", 12f, FontStyle.Bold | FontStyle.Italic);            
+            mc1.MenuCommands.ExtraFont = new Font("Times New Roman", 12f, FontStyle.Bold | FontStyle.Italic);
         }
-        
+
         protected void CreateMovieMenus(MenuCommand mc1, MenuCommand mc2)
         {
             // Create menu commands
@@ -293,34 +287,37 @@ namespace SampleMenus
             movie7.Infrequent = true;
             movie8.Infrequent = true;
 
-            mc1.MenuCommands.AddRange(new MenuCommand[]{movie0, movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8});
-            mc2.MenuCommands.AddRange(new MenuCommand[]{movie0, movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8});
-			
+            mc1.MenuCommands.AddRange(new MenuCommand[] { movie0, movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8 });
+            mc2.MenuCommands.AddRange(new MenuCommand[] { movie0, movie1, movie2, movie3, movie4, movie5, movie6, movie7, movie8 });
+
             // Setup the left column details
             mc1.MenuCommands.ExtraText = "Bond Films";
             mc1.MenuCommands.ExtraFont = new Font("Garamond", 12f, FontStyle.Bold);
-            mc1.MenuCommands.ExtraBackBrush = new LinearGradientBrush(new Point(0,0), new Point(100,100), 
+            mc1.MenuCommands.ExtraBackBrush = new LinearGradientBrush(new Point(0, 0), new Point(100, 100),
                                                                       Color.LightGreen, Color.DarkGreen);
         }
 
         protected void SetupStatusBar()
         {
             // Create and setup the StatusBar object
-            _status = new StatusBar();
-            _status.Dock = DockStyle.Bottom;
-            _status.ShowPanels = true;
+            // TODO StatusBar is no longer supported. Use StatusStrip instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/windows-forms/5.0/winforms-deprecated-controls
+            //_status = new StatusBar();
+            //_status.Dock = DockStyle.Bottom;
+            //_status.ShowPanels = true;
 
             // Create and setup a single panel for the StatusBar
-            _statusBarPanel = new StatusBarPanel();
-            _statusBarPanel.AutoSize = StatusBarPanelAutoSize.Spring;
-            _status.Panels.Add(_statusBarPanel);
+            // TODO StatusBarPanel is no longer supported. Use ToolStripStatusLabel instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/windows-forms/5.0/winforms-deprecated-controls
+            //_statusBarPanel = new StatusBarPanel();
+            // TODO StatusBarPanel is no longer supported. Use ToolStripStatusLabel instead. For more details see https://docs.microsoft.com/en-us/dotnet/core/compatibility/windows-forms/5.0/winforms-deprecated-controls
+            //_statusBarPanel.AutoSize = StatusBarPanelAutoSize.Spring;
+            //_status.Panels.Add(_statusBarPanel);
 
-            Controls.Add(_status);
+            //Controls.Add(_status);
         }
 
         public void SetStatusBarText(string text)
         {
-            _statusBarPanel.Text = text;
+            //_statusBarPanel.Text = text;
         }
 
         public ImageList Images
@@ -343,18 +340,18 @@ namespace SampleMenus
             SetStatusBarText("");
         }
 
-		protected void OnMenuItemSelected(string name)
-		{
-			MDIChild child = this.ActiveMdiChild as MDIChild;
+        protected void OnMenuItemSelected(string name)
+        {
+            MDIChild child = this.ActiveMdiChild as MDIChild;
 
-			if (child != null)
-				child.AppendText(name);
-		}
+            if (child != null)
+                child.AppendText(name);
+        }
 
         protected void OnGenericSelect(object sender, EventArgs e)
         {
-			MenuCommand mc = sender as MenuCommand;
-			OnMenuItemSelected(mc.Text);
+            MenuCommand mc = sender as MenuCommand;
+            OnMenuItemSelected(mc.Text);
         }
 
         protected void OnIDEUpdate(object sender, EventArgs e)
@@ -366,7 +363,7 @@ namespace SampleMenus
         protected void OnIDESelected(object sender, EventArgs e)
         {
             _topMenu.Style = VisualStyle.IDE;
-			OnMenuItemSelected("IDE");
+            OnMenuItemSelected("IDE");
         }
 
         protected void OnPlainUpdate(object sender, EventArgs e)
@@ -378,7 +375,7 @@ namespace SampleMenus
         protected void OnPlainSelected(object sender, EventArgs e)
         {
             _topMenu.Style = VisualStyle.Plain;
-			OnMenuItemSelected("Plain");
+            OnMenuItemSelected("Plain");
         }
 
         protected void OnPlainAsBlockUpdate(object sender, EventArgs e)
@@ -390,7 +387,7 @@ namespace SampleMenus
         protected void OnPlainAsBlockSelected(object sender, EventArgs e)
         {
             _topMenu.PlainAsBlock = !_topMenu.PlainAsBlock;
-			OnMenuItemSelected("PlainAsBlock");
+            OnMenuItemSelected("PlainAsBlock");
         }
 
         protected void OnMultiLineUpdate(object sender, EventArgs e)
@@ -402,13 +399,13 @@ namespace SampleMenus
         protected void OnMultiLineSelected(object sender, EventArgs e)
         {
             _topMenu.MultiLine = !_topMenu.MultiLine;
-			OnMenuItemSelected("MultiLine");
+            OnMenuItemSelected("MultiLine");
         }
 
         protected void OnDockLeftSelected(object sender, EventArgs e)
         {
             _topMenu.Dock = DockStyle.Left;
-			OnMenuItemSelected("DockLeft");
+            OnMenuItemSelected("DockLeft");
         }
 
         protected void OnDockLeftUpdate(object sender, EventArgs e)
@@ -420,7 +417,7 @@ namespace SampleMenus
         protected void OnDockTopSelected(object sender, EventArgs e)
         {
             _topMenu.Dock = DockStyle.Top;
-			OnMenuItemSelected("DockTop");
+            OnMenuItemSelected("DockTop");
         }
 
         protected void OnDockTopUpdate(object sender, EventArgs e)
@@ -432,7 +429,7 @@ namespace SampleMenus
         protected void OnDockRightSelected(object sender, EventArgs e)
         {
             _topMenu.Dock = DockStyle.Right;
-			OnMenuItemSelected("DockRight");
+            OnMenuItemSelected("DockRight");
         }
 
         protected void OnDockRightUpdate(object sender, EventArgs e)
@@ -444,7 +441,7 @@ namespace SampleMenus
         protected void OnDockBottomSelected(object sender, EventArgs e)
         {
             _topMenu.Dock = DockStyle.Bottom;
-			OnMenuItemSelected("DockBottom");
+            OnMenuItemSelected("DockBottom");
         }
 
         protected void OnDockBottomUpdate(object sender, EventArgs e)
@@ -455,19 +452,19 @@ namespace SampleMenus
 
         protected void OnExit(object sender, EventArgs e)
         {
-			Close();
+            Close();
         }
 
         protected void OnNewWindowSelected(object sender, EventArgs e)
         {
             MDIChild child = new MDIChild(this);
-			
+
             child.MdiParent = this;
-            child.Size = new Size(130,130);
-			child.Text = "Child" + _count++;
+            child.Size = new Size(180, 180);
+            child.Text = "Child" + _count++;
             child.Show();
 
-			OnMenuItemSelected("NewWindow");
+            OnMenuItemSelected("NewWindow");
         }
 
         protected void OnCloseWindowUpdate(object sender, EventArgs e)
@@ -480,7 +477,7 @@ namespace SampleMenus
         {
             // Close just the curren mdi child window
             this.ActiveMdiChild.Close();
-			OnMenuItemSelected("CloseWindow");
+            OnMenuItemSelected("CloseWindow");
         }
 
         protected void OnCloseAllUpdate(object sender, EventArgs e)
@@ -493,16 +490,16 @@ namespace SampleMenus
         {
             MenuCommand mdiCommand = sender as MenuCommand;
 
-			foreach(MDIChild child in Controls)
-				child.Close();
+            foreach (MDIChild child in Controls)
+                child.Close();
 
-			OnMenuItemSelected("CloseAll");
+            OnMenuItemSelected("CloseAll");
         }
 
         protected void OnNextSelected(object sender, EventArgs e)
         {
             Form current = this.ActiveMdiChild;
-			
+
             if (current != null)
             {
                 // Get collectiom of Mdi child windows
@@ -518,13 +515,13 @@ namespace SampleMenus
                 children[newPos].Activate();
             }
 
-			OnMenuItemSelected("Next");
+            OnMenuItemSelected("Next");
         }
 
         protected void OnPreviousSelected(object sender, EventArgs e)
         {
             Form current = this.ActiveMdiChild;
-			
+
             if (current != null)
             {
                 // Get collectiom of Mdi child windows
@@ -540,7 +537,7 @@ namespace SampleMenus
                 children[newPos].Activate();
             }
 
-			OnMenuItemSelected("Previous");
+            OnMenuItemSelected("Previous");
         }
 
         protected void OnNextPreviousUpdate(object sender, EventArgs e)
@@ -552,19 +549,19 @@ namespace SampleMenus
         protected void OnCascadeSelected(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.Cascade);
-			OnMenuItemSelected("Cascade");
+            OnMenuItemSelected("Cascade");
         }
 
         protected void OnTileHSelected(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileHorizontal);
-			OnMenuItemSelected("TileH");
+            OnMenuItemSelected("TileH");
         }
 
         protected void OnTileVSelected(object sender, EventArgs e)
         {
             this.LayoutMdi(MdiLayout.TileVertical);
-			OnMenuItemSelected("TileV");
+            OnMenuItemSelected("TileV");
         }
 
         protected void OnLayoutUpdate(object sender, EventArgs e)
@@ -573,67 +570,67 @@ namespace SampleMenus
             mc.Enabled = (this.MdiChildren.Length > 0);
         }
 
-		protected void OnWindowMenuStart(MenuCommand mc)
-		{
-			Form current = this.ActiveMdiChild;
-			
+        protected void OnWindowMenuStart(MenuCommand mc)
+        {
+            Form current = this.ActiveMdiChild;
+
             // Get collectiom of Mdi child windows
             Form[] children = this.MdiChildren;
 
-			if (children.Length > 0)
-			{
-				// Add a separator to the menu
-				mc.MenuCommands.Add(new MenuCommand("-"));
+            if (children.Length > 0)
+            {
+                // Add a separator to the menu
+                mc.MenuCommands.Add(new MenuCommand("-"));
 
-				foreach(Form f in children)
-				{
-					MenuCommand newMC = new MenuCommand(f.Text);
+                foreach (Form f in children)
+                {
+                    MenuCommand newMC = new MenuCommand(f.Text);
 
-					// Is this the currently selected child?
-					newMC.Checked = (current == f);
-					newMC.Click += new EventHandler(OnChildSelect);
+                    // Is this the currently selected child?
+                    newMC.Checked = (current == f);
+                    newMC.Click += new EventHandler(OnChildSelect);
 
-					// Add a command for this active MDI Child
-					mc.MenuCommands.Add(newMC);
-				}
-			}
-		}
+                    // Add a command for this active MDI Child
+                    mc.MenuCommands.Add(newMC);
+                }
+            }
+        }
 
-		protected void OnWindowMenuEnd(MenuCommand mc)
-		{
-			int count = mc.MenuCommands.Count;
+        protected void OnWindowMenuEnd(MenuCommand mc)
+        {
+            int count = mc.MenuCommands.Count;
 
-			// Did the OnTopMenuStart add any entries?
-			if (count >= 10)
-			{
-				// Remove all the extras
-				for(int index = 10; index < count; index++)
-					mc.MenuCommands.RemoveAt(10);
-			}
-		}
+            // Did the OnTopMenuStart add any entries?
+            if (count >= 10)
+            {
+                // Remove all the extras
+                for (int index = 10; index < count; index++)
+                    mc.MenuCommands.RemoveAt(10);
+            }
+        }
 
         protected void OnChildSelect(object sender, EventArgs e)
         {
             MenuCommand childCommand = sender as MenuCommand;
 
-			// Get name of the window to activate
-			string name = childCommand.Text;
+            // Get name of the window to activate
+            string name = childCommand.Text;
 
             // Get collectiom of Mdi child windows
             Form[] children = this.MdiChildren;
 
-			foreach(Form f in children)
-			{
-				// Aha...found it
-				if (f.Text == name)
-				{
-					f.Activate();
-					break;
-				}
-			}
+            foreach (Form f in children)
+            {
+                // Aha...found it
+                if (f.Text == name)
+                {
+                    f.Activate();
+                    break;
+                }
+            }
 
-			OnMenuItemSelected("ChildSelected");
-		}
+            OnMenuItemSelected("ChildSelected");
+        }
 
         protected void OnYesAnimateSelected(object sender, EventArgs e)
         {
@@ -646,7 +643,7 @@ namespace SampleMenus
             MenuCommand mc = sender as MenuCommand;
             mc.Checked = (_topMenu.Animate == Animate.Yes);
         }
-        
+
         protected void OnNoAnimateSelected(object sender, EventArgs e)
         {
             _topMenu.Animate = Animate.No;
@@ -791,17 +788,17 @@ namespace SampleMenus
             mc.Checked = (_topMenu.AnimateStyle == Animation.System);
         }
 
-        protected override void Dispose( bool disposing )
+        protected override void Dispose(bool disposing)
         {
-            if( disposing )
+            if (disposing)
             {
-                if (components != null) 
+                if (components != null)
                     components.Dispose();
             }
-            base.Dispose( disposing );
+            base.Dispose(disposing);
         }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
         private void InitializeComponent()
         {
             // 
@@ -809,94 +806,11 @@ namespace SampleMenus
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(250, 270);
+            this.ClientSize = new System.Drawing.Size(350, 370);
             this.Name = "MDIContainer";
             this.Text = "SampleMenus";
             this.IsMdiContainer = true;
         }
-		#endregion
-
-        [STAThread]
-        static void Main() 
-        {
-            Application.Run(new MDIContainer());
-        }
-    }
-    
-    class MDIChild : Form
-    {
-        protected MDIContainer _mdiContainer;
-		protected RichTextBox _box;
-
-        public MDIChild(MDIContainer mdiContainer)
-        {
-            // Remember parent Form
-            _mdiContainer = mdiContainer;
-
-            // Create a RichTextBox to fill entire client area
-            _box = new RichTextBox();
-            _box.Text = "Right click inside this window to show a Popup menu.";
-            _box.Dock = DockStyle.Fill;
-            _box.BorderStyle = BorderStyle.None;
-            _box.MouseUp += new MouseEventHandler(OnRichTextMouseUp);
-            Controls.Add(_box);
-        }
-
-		public void AppendText(string text)
-		{
-			_box.Text = _box.Text + "\n" + text;
-		}
-
-        protected void OnRichTextMouseUp(object sender, MouseEventArgs e)
-        {
-            if(e.Button == MouseButtons.Right)
-            {
-                RichTextBox box = sender as RichTextBox;
-
-	            MenuCommand s0 = new MenuCommand("Italy", _mdiContainer.Images, 0);
-                MenuCommand s1 = new MenuCommand("Spain", _mdiContainer.Images, 1);
-                MenuCommand s2 = new MenuCommand("Canada", _mdiContainer.Images, 2);
-                MenuCommand s3 = new MenuCommand("France", _mdiContainer.Images, 3);
-                MenuCommand s4 = new MenuCommand("Belgium", _mdiContainer.Images, 4);
-                MenuCommand spain0 = new MenuCommand("Nerja", _mdiContainer.Images, 5);
-                MenuCommand spain1 = new MenuCommand("Madrid", _mdiContainer.Images, 6);
-                MenuCommand spain2 = new MenuCommand("Barcelona", _mdiContainer.Images, 0);
-                MenuCommand canada0 = new MenuCommand("Toronto", _mdiContainer.Images, 5);
-                MenuCommand canada1 = new MenuCommand("Montreal", _mdiContainer.Images, 6);
-                MenuCommand canada2 = new MenuCommand("Belleville", _mdiContainer.Images, 0);
-                MenuCommand england = new MenuCommand("England", _mdiContainer.Images, 2);
-                MenuCommand england1 = new MenuCommand("London", _mdiContainer.Images, 5);
-                MenuCommand england2 = new MenuCommand("Birmingham", _mdiContainer.Images, 6);
-                MenuCommand england3 = new MenuCommand("Nottingham", _mdiContainer.Images, 0);
-                england.MenuCommands.AddRange(new MenuCommand[]{england1,england2,england3});
-                s1.MenuCommands.AddRange(new MenuCommand[]{spain0, spain1, spain2});
-                s2.MenuCommands.AddRange(new MenuCommand[]{canada0, canada1, canada2, england});
-
-                // Create the popup menu object
-                PopupMenu popup = new PopupMenu();
-
-                // Define the list of menu commands
-                popup.MenuCommands.AddRange(new MenuCommand[]{s0, s1, s2, s3, s4});
-
-                // Define the properties to get appearance to match MenuControl
-                popup.Style = _mdiContainer.Style;
-
-                popup.Selected += new CommandHandler(OnSelected);
-                popup.Deselected += new CommandHandler(OnDeselected);
-
-                // Show it!
-                popup.TrackPopup(box.PointToScreen(new Point(e.X, e.Y)));
-            }
-        }
-
-        protected void OnSelected(MenuCommand mc)
-        {
-            _mdiContainer.SetStatusBarText("Selection over " + mc.Description);
-        }
-
-        protected void OnDeselected(MenuCommand mc)
-        {
-            _mdiContainer.SetStatusBarText("");
-        }
+        #endregion
     }
 }

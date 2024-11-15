@@ -1,19 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <ProjectType>Local</ProjectType>
     <OutputType>Library</OutputType>
     <RootNamespace>Crownwood.Magic</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
-    <Configurations>Debug;Release;StrongMagic</Configurations>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <PlatformTarget>x64</PlatformTarget>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <FileAlignment>4096</FileAlignment>
-    <RegisterForComInterop>false</RegisterForComInterop>
-    <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <BaseAddress>285212672</BaseAddress>
+    <!--<AllowUnsafeBlocks>true</AllowUnsafeBlocks>-->
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="Controls\BorderForControl\BorderForControl.cs">

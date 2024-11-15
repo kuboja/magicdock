@@ -65,20 +65,20 @@ namespace Crownwood.Magic.Menus
                                                         {1, 0, 1, 2, 2, 1, 3, 4, 3, 3, 2, 8, 5, 5, 5, 10, 0, 0, 2, 2, 2, 5}		// Plain
                                                      };
         // Other class constants
-        protected static int _selectionDelay = 400;
-        protected static int _expansionDelay = 1100;
-        protected static int _imageWidth = 16;
-        protected static int _imageHeight = 16;
-        protected static int _shadowLength = 4;
-        protected static int _shadowHalf = 2;
-        protected static int _blendSteps = 6;
-        protected static Bitmap _shadowCache = null;
-        protected static int _shadowCacheWidth = 0;
-        protected static int _shadowCacheHeight = 0;
+        private static readonly int _selectionDelay = 400;
+        private static readonly int _expansionDelay = 1100;
+        private static readonly int _imageWidth = 16;
+        private static readonly int _imageHeight = 16;
+        private static readonly int _shadowLength = 4;
+        //private static readonly int _shadowHalf = 2;
+        private static readonly int _blendSteps = 6;
+        private static Bitmap _shadowCache = null;
+        private static int _shadowCacheWidth = 0;
+        private static int _shadowCacheHeight = 0;
 		
         // Class fields
-        protected static ImageList _menuImages = null;
-        protected static bool _supportsLayered = false;
+        private static readonly ImageList _menuImages = null;
+        private static readonly bool _supportsLayered = false;
 		
         // Indexes into the menu images strip
         protected enum ImageIndex
@@ -3330,14 +3330,14 @@ namespace Crownwood.Magic.Menus
             }
         }
 
-        protected void OnWM_MOUSEACTIVATE(ref Message m)
+        protected static void OnWM_MOUSEACTIVATE(ref Message m)
         {
             // Do not allow the mouse down to activate the window, but eat 
             // the message as we still want the mouse down for processing
             m.Result = (IntPtr)Win32.MouseActivateFlags.MA_NOACTIVATE;
         }
 
-        protected void OnWM_SETCURSOR()
+        protected static void OnWM_SETCURSOR()
         {
             // Always use the arrow cursor
             User32.SetCursor(User32.LoadCursor(IntPtr.Zero, (uint)Win32.Cursors.IDC_ARROW));
@@ -3441,38 +3441,38 @@ namespace Crownwood.Magic.Menus
                 return _shadowCache;
 
             // Dispose of any previously cached bitmap	
-            if (_shadowCache != null)
-                _shadowCache.Dispose();
+            _shadowCache?.Dispose();
 	
 	        // Create our new bitmap with 32bpp so we have an alpha channel
             Bitmap image = new Bitmap(width, height, PixelFormat.Format32bppArgb);
             
             // We want direct access to the bits so we can change values
             BitmapData data = image.LockBits(new System.Drawing.Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
-				
-            unsafe
+            
+            // Direct pointer to first line
+            IntPtr ptr = data.Scan0;
+            int bytes = Math.Abs(data.Stride) * height;
+            byte[] rgbaValues = new byte[bytes];
+
+            // For each row
+            for (int y = 0; y < height; y++)
             {
-                // Direct pointer to first line
-                uint* pixptr = (uint*)(data.Scan0);
-					
-			    // For each row
-                for (int y = 0; y < height; y++)
-                {
-                    int offset = data.Stride * y / 4;
+                int offset = data.Stride * y / 4;
                     
-                    // Fade each line as we go down
-                    int alphay = 64 * (height - y) / (height + 1);
+                // Fade each line as we go down
+                int alphay = 64 * (height - y) / (height + 1);
 						
-				    // For each column pixel
-                    for (int x = 0; x < width; x++)
-                    {
-                        // Fade each pixel as we go across
-                        int alphax = alphay * (width - x) / (width + 1);
-                        pixptr[offset+x] = (uint)alphax << 24;
-                    }
+				// For each column pixel
+                for (int x = 0; x < width; x++)
+                {
+                    // Fade each pixel as we go across
+                    int alphax = alphay * (width - x) / (width + 1);
+                    int index = offset + x * 4;
+                    rgbaValues[index + 3] = (byte)alphax; // Alpha channel
                 }
             }
-	
+
+            Marshal.Copy(rgbaValues, 0, ptr, bytes);
             image.UnlockBits(data);
 
             // Cache values for next time around	

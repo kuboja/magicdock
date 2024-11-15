@@ -1,32 +1,36 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicLibrary", "MagicLibrary\MagicLibrary.csproj", "{92F94EA0-9910-4895-B8A1-FED1543A9DA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagicLibrary", "MagicLibrary\MagicLibrary.csproj", "{92F94EA0-9910-4895-B8A1-FED1543A9DA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTabControl", "..\Samples\C#\SampleTabControl\SampleTabControl.csproj", "{00E248FB-8C5D-4896-9AFC-3B86AEB3AB1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMenus", "..\Samples\C#\SampleMenus\SampleMenus.csproj", "{AF397931-2D14-426B-8490-0C640E2B9252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-		StrongMagic|Any CPU = StrongMagic|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.StrongMagic|Any CPU.ActiveCfg = StrongMagic|Any CPU
-		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.StrongMagic|Any CPU.Build.0 = StrongMagic|Any CPU
 		{00E248FB-8C5D-4896-9AFC-3B86AEB3AB1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{00E248FB-8C5D-4896-9AFC-3B86AEB3AB1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00E248FB-8C5D-4896-9AFC-3B86AEB3AB1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00E248FB-8C5D-4896-9AFC-3B86AEB3AB1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00E248FB-8C5D-4896-9AFC-3B86AEB3AB1C}.StrongMagic|Any CPU.ActiveCfg = Release|Any CPU
-		{00E248FB-8C5D-4896-9AFC-3B86AEB3AB1C}.StrongMagic|Any CPU.Build.0 = Release|Any CPU
+		{AF397931-2D14-426B-8490-0C640E2B9252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF397931-2D14-426B-8490-0C640E2B9252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF397931-2D14-426B-8490-0C640E2B9252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF397931-2D14-426B-8490-0C640E2B9252}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D628A7A3-1B47-4D44-92DC-9C827855EE7D}
 	EndGlobalSection
 EndGlobal
