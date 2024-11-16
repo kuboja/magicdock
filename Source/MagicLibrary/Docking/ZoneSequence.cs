@@ -89,10 +89,11 @@ namespace Crownwood.Magic.Docking
 			get { return _resizeBar.Height * 6; } 
 		}
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
 		public override DockStyle Dock
 		{
-			get { return base.Dock; }
 
+            get { return base.Dock; }
 			set
 			{
 				base.Dock = value;
@@ -101,6 +102,7 @@ namespace Crownwood.Magic.Docking
 			}
 		}
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Direction Direction
         {
             get { return _direction; }
@@ -112,6 +114,7 @@ namespace Crownwood.Magic.Docking
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override State State
         {
             set 

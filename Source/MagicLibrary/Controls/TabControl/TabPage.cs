@@ -222,6 +222,7 @@ namespace Crownwood.Magic.Controls
         /// <c>TitleFont</c> setup.
         /// </summary>
         [Category("Appearance")]
+        [DefaultValue(null)]
         public System.Drawing.Font TitleFont
         {
             get
@@ -244,7 +245,8 @@ namespace Crownwood.Magic.Controls
             if (PropertyChanged != null)
                 PropertyChanged(this, prop, oldValue);
         }
-        
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         internal bool Shown
         {
             get { return _shown; }

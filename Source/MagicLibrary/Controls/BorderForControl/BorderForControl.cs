@@ -54,6 +54,7 @@ namespace Crownwood.Magic.Controls
             }
         }	
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int BorderWidth
         {
             get { return _borderWidth; }

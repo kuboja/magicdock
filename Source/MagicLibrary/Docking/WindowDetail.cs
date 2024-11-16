@@ -36,13 +36,15 @@ namespace Crownwood.Magic.Docking
             this.BackColor = _manager.BackColor;            
             this.ForeColor = _manager.InactiveTextColor;
         }
-		
+        
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public virtual Zone ParentZone
         { 
             get { return _parentZone; }
             set { _parentZone = value; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Window ParentWindow
         { 
             get { return _parentWindow; }

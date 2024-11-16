@@ -1208,6 +1208,7 @@ namespace Crownwood.Magic.Controls
         }
 
         [Category("Appearance")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public virtual bool IDEPixelArea
         {
             get { return _idePixelArea; }

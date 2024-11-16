@@ -118,6 +118,7 @@ namespace Crownwood.Magic.Forms
         }
 		#endregion
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public new string Text
         {
             get { return _cachedTitle; }

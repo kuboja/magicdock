@@ -59,6 +59,7 @@ namespace Crownwood.Magic.Controls
             UpdateStyle(_resizeSource.Style);
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public VisualStyle Style
         {
             get { return _style; }
@@ -70,6 +71,7 @@ namespace Crownwood.Magic.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Direction Direction
         {
             get { return _direction; }
@@ -84,6 +86,7 @@ namespace Crownwood.Magic.Controls
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int Length
         {
             get

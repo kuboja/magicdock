@@ -119,6 +119,7 @@ namespace Crownwood.Magic.Docking
             base.Dispose(disposing);
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public TabPageCollection TabPages
         {
             get { return _tabPages; }
@@ -130,8 +131,9 @@ namespace Crownwood.Magic.Docking
             }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
 		public Edge Edging
-		{
+        {
 			get { return _edge; }
 
 			set
@@ -146,8 +148,9 @@ namespace Crownwood.Magic.Docking
 		    }
 		}
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
 		public int SelectedIndex
-		{
+        {
 			get { return _selectedIndex; }
 
 			set
@@ -161,6 +164,7 @@ namespace Crownwood.Magic.Docking
 			}
 		}
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override Font Font
         {
             get { return base.Font; }
@@ -182,6 +186,7 @@ namespace Crownwood.Magic.Docking
             }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override Color BackColor
         {
             get { return base.BackColor; }
@@ -197,6 +202,7 @@ namespace Crownwood.Magic.Docking
             }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public WindowContentTabbed WindowContentTabbed
         {
             get { return _wct; }

@@ -38,8 +38,9 @@ namespace Crownwood.Magic.Controls
             _captionTitle = "(Page Title)";
         }
 		
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
 		public bool FullPage
-		{
+        {
 		    get { return _fullPage; }
 		    
 		    set 
@@ -53,7 +54,8 @@ namespace Crownwood.Magic.Controls
 		}
 		
 		[Localizable(true)]
-		public string SubTitle
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string SubTitle
 		{
 		    get { return _subTitle; }
 
@@ -68,7 +70,8 @@ namespace Crownwood.Magic.Controls
 		}
 		
 		[Localizable(true)]
-		public string CaptionTitle
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+        public string CaptionTitle
 		{
 		    get { return _captionTitle; }
 		    

@@ -241,6 +241,7 @@ namespace Crownwood.Magic.Menus
         } 
 
         [Category("Appearance")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public VisualStyle Style
         {
             get { return _style; }
@@ -257,6 +258,7 @@ namespace Crownwood.Magic.Menus
             }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override Font Font
         {
             get { return base.Font; }
@@ -473,6 +475,7 @@ namespace Crownwood.Magic.Menus
         }
 
         [Category("Appearance")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Direction Direction
         {
             get { return _direction; }
@@ -521,6 +524,7 @@ namespace Crownwood.Magic.Menus
             set { _highlightInfrequent = value; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override DockStyle Dock
         {
             get { return base.Dock; }
@@ -560,6 +564,7 @@ namespace Crownwood.Magic.Menus
         }
 
         [Category("AnimateTime")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int AnimateTime
         {
             get { return _animateTime; }
@@ -567,6 +572,7 @@ namespace Crownwood.Magic.Menus
         }
 
         [Category("AnimateStyle")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Animation AnimateStyle
         {
             get { return _animateStyle; }

@@ -42,10 +42,11 @@ namespace Crownwood.Magic.Docking
             _contents.Removed += new CollectionChange(OnContentRemoved);
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public ContentCollection Contents
         {
             get { return _contents; }
-			
+            
             set
             {
                 _contents.Clear();
@@ -53,7 +54,7 @@ namespace Crownwood.Magic.Docking
             }
         }
 
-		public virtual void BringContentToFront(Content c) {}
+        public virtual void BringContentToFront(Content c) {}
 
         protected virtual void OnContentsClearing()
         {

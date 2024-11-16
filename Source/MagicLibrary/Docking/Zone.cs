@@ -61,12 +61,14 @@ namespace Crownwood.Magic.Docking
             _windows.Removed += new CollectionChange(OnWindowRemoved);
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public virtual State State
         {
             get { return _state; }
             set { _state = value; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool AutoDispose
         {
             get { return _autoDispose; }
@@ -78,6 +80,7 @@ namespace Crownwood.Magic.Docking
             get { return _manager; }
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public WindowCollection Windows
         {
             get { return _windows; }

@@ -68,6 +68,7 @@ namespace Crownwood.Magic.Docking
             get { return _manager; }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public State State
         {
             get { return _state; }
@@ -85,6 +86,7 @@ namespace Crownwood.Magic.Docking
             }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Zone ParentZone
         {
             get { return _parentZone; }
@@ -102,6 +104,7 @@ namespace Crownwood.Magic.Docking
             }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public WindowDetailCollection WindowDetails
         {
             get { return _windowDetails; }
@@ -113,18 +116,21 @@ namespace Crownwood.Magic.Docking
             }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Decimal ZoneArea
         {
             get { return _zoneArea; }
             set { _zoneArea = value; }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Size MinimalSize
         {
             get { return _minimalSize; }
             set { _minimalSize = value; }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool AutoDispose
         {
             get { return _autoDispose; }
@@ -136,6 +142,7 @@ namespace Crownwood.Magic.Docking
             get { return _fullTitle; }
         }
 
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool RedockAllowed
         {
             get { return _redockAllowed; }

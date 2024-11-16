@@ -918,6 +918,7 @@ namespace Crownwood.Magic.Controls
 
         [Category("Wizard")]
         [Description("Index of currently selected WizardPage")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int SelectedIndex
         {
             get { return _tabControl.SelectedIndex; }

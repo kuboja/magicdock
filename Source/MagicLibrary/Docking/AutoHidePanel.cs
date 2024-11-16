@@ -322,7 +322,8 @@ namespace Crownwood.Magic.Docking
             if (_currentPanel != null)
                 _currentPanel.PropogateNameValue(name, value);
         }
-        
+
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override Color BackColor
         {
             get { return base.BackColor; }

@@ -264,6 +264,7 @@ namespace Crownwood.Magic.Controls
         }
         
         [Category("TabbedGroups")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Color ResizeBarColor
         {
             get { return _resizeBarColor; }
@@ -317,6 +318,7 @@ namespace Crownwood.Magic.Controls
 		}
 		
 		[Category("TabbedGroups")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public TabGroupLeaf ProminentLeaf
         {
             get { return _prominentLeaf; }
@@ -804,6 +806,7 @@ namespace Crownwood.Magic.Controls
 		}
 
         [Category("TabbedGroups")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public bool AtLeastOneLeaf
         {
             get { return _atLeastOneLeaf; }

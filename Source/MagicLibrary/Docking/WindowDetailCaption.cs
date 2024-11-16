@@ -97,6 +97,7 @@ namespace Crownwood.Magic.Docking
             Application.AddMessageFilter(this);
         }
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public override Zone ParentZone
         {
             set
