@@ -244,7 +244,7 @@ namespace Crownwood.Magic.Docking
 			string attrState = xmlIn.GetAttribute(0);
 
 			// Convert from string to enumeration value
-			_state = (State)Enum.Parse(typeof(State), attrState);
+			_state = Enum.Parse<State>(attrState);
 		}
 	}
 	

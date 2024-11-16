@@ -32,7 +32,7 @@ namespace Crownwood.Magic.Controls
         }
 
         // Class fields
-        protected static int _count = 0;
+        private static int _count = 0;
 
         // Instance fields
         protected int _unique;

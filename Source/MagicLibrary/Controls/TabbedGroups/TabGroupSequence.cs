@@ -138,10 +138,10 @@ namespace Crownwood.Magic.Controls
         {
             // Range check index
             if (index < 0)
-                throw new ArgumentOutOfRangeException("index", index, "Insert index must be at least 0");
+                throw new ArgumentOutOfRangeException(nameof(index), index, "Insert index must be at least 0");
                 
             if (index >= _children.Count)
-                throw new ArgumentOutOfRangeException("index", index, "Cannot insert after end of current entries");
+                throw new ArgumentOutOfRangeException(nameof(index), index, "Cannot insert after end of current entries");
 
             // Create a new leaf instance with correct back references
             TabGroupLeaf tgl = new TabGroupLeaf(_tabbedGroups, this);
@@ -163,10 +163,10 @@ namespace Crownwood.Magic.Controls
         {
             // Range check index
             if (index < 0)
-                throw new ArgumentOutOfRangeException("index", index, "RemoveAt index must be at least 0");
+                throw new ArgumentOutOfRangeException(nameof(index), index, "RemoveAt index must be at least 0");
                 
             if (index >= _children.Count)
-                throw new ArgumentOutOfRangeException("index", index, "Cannot remove entry after end of list");
+                throw new ArgumentOutOfRangeException(nameof(index), index, "Cannot remove entry after end of list");
 
             // Is the removed item the active leaf?
             if (_children[index] == _tabbedGroups.ActiveLeaf)
@@ -430,7 +430,7 @@ namespace Crownwood.Magic.Controls
                 if (!xmlIn.Read())
                     throw new ArgumentException("An element was expected but could not be read in");
 
-                TabGroupBase newElement = null;
+                TabGroupBase newElement;
 
                 // Is it another sequence?
                 if (xmlIn.Name == "Sequence")
@@ -782,10 +782,10 @@ namespace Crownwood.Magic.Controls
         {
             // Range check index
             if (index < 0)
-                throw new ArgumentOutOfRangeException("index", index, "Insert index must be at least 0");
+                throw new ArgumentOutOfRangeException(nameof(index), index, "Insert index must be at least 0");
                 
             if (index >= _children.Count)
-                throw new ArgumentOutOfRangeException("index", index, "Cannot insert after end of current entries");
+                throw new ArgumentOutOfRangeException(nameof(index), index, "Cannot insert after end of current entries");
         
             // Remember reference
             _children.Insert(index, group);
