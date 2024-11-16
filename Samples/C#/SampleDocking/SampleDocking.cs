@@ -37,16 +37,10 @@ public class SampleDocking : Form
     protected MenuCommand _placeHolder;
     protected DockingManager _manager;
     protected ImageList _internalImages;
-    protected StatusBar _statusBar;
+    protected StatusStrip _statusBar;
     protected Crownwood.Magic.Menus.MenuControl _topMenu;
     protected Crownwood.Magic.Controls.TabControl _filler;
     protected Crownwood.Magic.Controls.TabControl.VisualAppearance _tabAppearance = Crownwood.Magic.Controls.TabControl.VisualAppearance.MultiForm;
-
-    [STAThread]
-    public static void Main()
-    {
-        Application.Run(new SampleDocking());
-    }
 
     public SampleDocking()
     {
@@ -104,14 +98,13 @@ public class SampleDocking : Form
         _manager.InnerControl = _filler;
 
         // Create and setup the StatusBar object
-        _statusBar = new StatusBar();
+        _statusBar = new StatusStrip();
         _statusBar.Dock = DockStyle.Bottom;
-        _statusBar.ShowPanels = true;
 
-        // Create and setup a single panel for the StatusBar
-        StatusBarPanel statusBarPanel = new StatusBarPanel();
-        statusBarPanel.AutoSize = StatusBarPanelAutoSize.Spring;
-        _statusBar.Panels.Add(statusBarPanel);
+        //// Create and setup a single panel for the StatusBar
+        ToolStripStatusLabel statusBarPanel = new ToolStripStatusLabel();
+
+        _statusBar.Items.Add(statusBarPanel);
         Controls.Add(_statusBar);
 
         _topMenu = CreateMenus();

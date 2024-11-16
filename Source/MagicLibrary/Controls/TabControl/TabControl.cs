@@ -3293,7 +3293,7 @@ namespace Crownwood.Magic.Controls
         {
             // Has not been shown for the first time yet
             page.Shown = false;
-            page.VisibleChanged += new EventHandler(OnPageVisibleChanged);
+            //page.VisibleChanged += new EventHandler(OnPageVisibleChanged); // TODO musel jsem to zakomentovat, v pùvodní verzi toto není a tady to zpùsobí pád
 
             // Add user supplied control 
             if (page.Control != null)

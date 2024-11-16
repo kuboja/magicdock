@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTabControl", "..\Samp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMenus", "..\Samples\C#\SampleMenus\SampleMenus.csproj", "{AF397931-2D14-426B-8490-0C640E2B9252}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDocking", "..\Samples\C#\SampleDocking\SampleDocking.csproj", "{2CDCCB96-6653-4701-9697-AD846C3DB7BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTabbedGroups", "..\Samples\C#\SampleTabbedGroups\SampleTabbedGroups.csproj", "{1B7EE914-8C97-43F2-B3E8-FED3852BC751}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{AF397931-2D14-426B-8490-0C640E2B9252}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF397931-2D14-426B-8490-0C640E2B9252}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF397931-2D14-426B-8490-0C640E2B9252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CDCCB96-6653-4701-9697-AD846C3DB7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CDCCB96-6653-4701-9697-AD846C3DB7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CDCCB96-6653-4701-9697-AD846C3DB7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CDCCB96-6653-4701-9697-AD846C3DB7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7EE914-8C97-43F2-B3E8-FED3852BC751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7EE914-8C97-43F2-B3E8-FED3852BC751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7EE914-8C97-43F2-B3E8-FED3852BC751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7EE914-8C97-43F2-B3E8-FED3852BC751}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

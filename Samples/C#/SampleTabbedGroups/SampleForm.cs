@@ -35,7 +35,7 @@ namespace SampleTabbedGroups
         private DockingManager _manager;
 	
         private Crownwood.Magic.Menus.MenuControl menuControl1;
-        private System.Windows.Forms.StatusBar statusBar1;
+        private System.Windows.Forms.StatusStrip statusBar1;
         private Crownwood.Magic.Controls.TabControl tabControl1;
         private Crownwood.Magic.Controls.TabPage tabPage1;
         private Crownwood.Magic.Controls.TabPage tabPage2;
@@ -446,7 +446,7 @@ namespace SampleTabbedGroups
             this.components = new System.ComponentModel.Container();
             System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(SampleForm));
             this.menuControl1 = new Crownwood.Magic.Menus.MenuControl();
-            this.statusBar1 = new System.Windows.Forms.StatusBar();
+            this.statusBar1 = new System.Windows.Forms.StatusStrip();
             this.tabControl1 = new Crownwood.Magic.Controls.TabControl();
             this.mainTabs = new System.Windows.Forms.ImageList(this.components);
             this.tabPage2 = new Crownwood.Magic.Controls.TabPage();
@@ -488,40 +488,13 @@ namespace SampleTabbedGroups
             this.statusBar1.TabIndex = 1;
             this.statusBar1.Text = "statusBar1";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.HideTabsMode = Crownwood.Magic.Controls.TabControl.HideTabsModes.ShowAlways;
-            this.tabControl1.ImageList = this.mainTabs;
-            this.tabControl1.Location = new System.Drawing.Point(0, 25);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.SelectedTab = this.tabPage1;
-            this.tabControl1.Size = new System.Drawing.Size(512, 430);
-            this.tabControl1.TabIndex = 2;
-            this.tabControl1.TabPages.AddRange(new Crownwood.Magic.Controls.TabPage[] {
-                                                                                          this.tabPage1,
-                                                                                          this.tabPage2,
-                                                                                          this.tabPage3});
-            // 
             // mainTabs
             // 
             this.mainTabs.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.mainTabs.ImageSize = new System.Drawing.Size(16, 16);
             this.mainTabs.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("mainTabs.ImageStream")));
             this.mainTabs.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.AddRange(new System.Windows.Forms.Control[] {
-                                                                                   this.tabbedGroups2});
-            this.tabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPage2.ImageIndex = 1;
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Selected = false;
-            this.tabPage2.Size = new System.Drawing.Size(384, 301);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Title = "Group2";
+            
             // 
             // tabbedGroups2
             // 
@@ -542,23 +515,25 @@ namespace SampleTabbedGroups
             this.tabbedGroups2.GlobalLoading += new Crownwood.Magic.Controls.TabbedGroups.GlobalLoadingHandler(this.GlobalLoading);
             this.tabbedGroups2.GlobalSaving += new Crownwood.Magic.Controls.TabbedGroups.GlobalSavingHandler(this.GlobalSaving);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.AddRange(new System.Windows.Forms.Control[] {
+                                                                                   this.tabbedGroups2});
+            this.tabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPage2.ImageIndex = 1;
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Selected = false;
+            this.tabPage2.Size = new System.Drawing.Size(384, 301);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Title = "Group2";
+            // 
             // groupTabs
             // 
             this.groupTabs.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.groupTabs.ImageSize = new System.Drawing.Size(16, 16);
             this.groupTabs.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("groupTabs.ImageStream")));
             this.groupTabs.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.AddRange(new System.Windows.Forms.Control[] {
-                                                                                   this.tabbedGroups1});
-            this.tabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPage1.ImageIndex = 0;
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(512, 405);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Title = "Group1";
+            
             // 
             // tabbedGroups1
             // 
@@ -579,17 +554,17 @@ namespace SampleTabbedGroups
             this.tabbedGroups1.GlobalLoading += new Crownwood.Magic.Controls.TabbedGroups.GlobalLoadingHandler(this.GlobalLoading);
             this.tabbedGroups1.GlobalSaving += new Crownwood.Magic.Controls.TabbedGroups.GlobalSavingHandler(this.GlobalSaving);
             // 
-            // tabPage3
+            // tabPage1
             // 
-            this.tabPage3.Controls.AddRange(new System.Windows.Forms.Control[] {
-                                                                                   this.tabbedGroups3});
-            this.tabPage3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPage3.ImageIndex = 2;
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Selected = false;
-            this.tabPage3.Size = new System.Drawing.Size(384, 301);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Title = "Group3";
+            this.tabPage1.Controls.AddRange(new System.Windows.Forms.Control[] {
+                                                                                   this.tabbedGroups1});
+            this.tabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPage1.ImageIndex = 0;
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(512, 405);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Title = "Group1";
+            
             // 
             // tabbedGroups3
             // 
@@ -608,6 +583,34 @@ namespace SampleTabbedGroups
             this.tabbedGroups3.PageLoading += new Crownwood.Magic.Controls.TabbedGroups.PageLoadingHandler(this.PageLoading);
             this.tabbedGroups3.GlobalLoading += new Crownwood.Magic.Controls.TabbedGroups.GlobalLoadingHandler(this.GlobalLoading);
             this.tabbedGroups3.GlobalSaving += new Crownwood.Magic.Controls.TabbedGroups.GlobalSavingHandler(this.GlobalSaving);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.AddRange(new System.Windows.Forms.Control[] {
+                                                                                   this.tabbedGroups3});
+            this.tabPage3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPage3.ImageIndex = 2;
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Selected = false;
+            this.tabPage3.Size = new System.Drawing.Size(384, 301);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Title = "Group3";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.HideTabsMode = Crownwood.Magic.Controls.TabControl.HideTabsModes.ShowAlways;
+            this.tabControl1.ImageList = this.mainTabs;
+            this.tabControl1.Location = new System.Drawing.Point(0, 25);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.SelectedTab = this.tabPage1;
+            this.tabControl1.Size = new System.Drawing.Size(512, 430);
+            this.tabControl1.TabIndex = 2;
+            this.tabControl1.TabPages.AddRange(new Crownwood.Magic.Controls.TabPage[] {
+                                                                                          this.tabPage1,
+                                                                                          this.tabPage2,
+                                                                                          this.tabPage3});
             // 
             // SampleForm
             // 
