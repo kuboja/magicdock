@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFrameworks>net8.0-windows;net9.0-windows</TargetFrameworks>
+    <Version>1.7.5.0</Version>
     <RootNamespace>Crownwood.Magic</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
@@ -90,7 +91,5 @@
     <Company>Crownwood Consulting Ltd</Company>
     <Product>Magic</Product>
     <Copyright>Copyright 2002-2003 - Crownwood Consulting Ltd</Copyright>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <FileVersion>1.7.4.2</FileVersion>
   </PropertyGroup>
 </Project>
