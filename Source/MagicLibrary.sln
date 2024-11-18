@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleDocking", "..\Samples
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleTabbedGroups", "..\Samples\C#\SampleTabbedGroups\SampleTabbedGroups.csproj", "{1B7EE914-8C97-43F2-B3E8-FED3852BC751}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWizard", "..\Samples\C#\SampleWizard\SampleWizard.csproj", "{7D1A9924-D70B-4C5E-A9B1-56B165931F62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{1B7EE914-8C97-43F2-B3E8-FED3852BC751}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B7EE914-8C97-43F2-B3E8-FED3852BC751}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B7EE914-8C97-43F2-B3E8-FED3852BC751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1A9924-D70B-4C5E-A9B1-56B165931F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1A9924-D70B-4C5E-A9B1-56B165931F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1A9924-D70B-4C5E-A9B1-56B165931F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1A9924-D70B-4C5E-A9B1-56B165931F62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

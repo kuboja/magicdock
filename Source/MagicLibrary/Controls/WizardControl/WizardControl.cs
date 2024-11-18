@@ -453,12 +453,12 @@ namespace Crownwood.Magic.Controls
 		
         public void ResetTitleFont()
         {
-            TitleFont = new Font("Tahoma", 10, FontStyle.Bold);
+            TitleFont = new Font(Font.FontFamily, 10, FontStyle.Bold);
         }
 
         protected bool ShouldSerializeTitleFont()
         {
-            return !_fontTitle.Equals(new Font("Tahoma", 10, FontStyle.Bold));
+            return !_fontTitle.Equals(new Font(Font.FontFamily, 10, FontStyle.Bold));
         }
     
         [Category("Wizard")]
@@ -476,12 +476,12 @@ namespace Crownwood.Magic.Controls
 		
         public void ResetSubTitleFont()
         {
-            _fontSubTitle = new Font("Tahoma", 8, FontStyle.Regular);
+            _fontSubTitle = new Font(Font.FontFamily, 8, FontStyle.Regular);
         }
 
         protected bool ShouldSerializeSubTitleFont()
         {
-            return !_fontSubTitle.Equals(new Font("Tahoma", 8, FontStyle.Regular));
+            return !_fontSubTitle.Equals(new Font(Font.FontFamily, 8, FontStyle.Regular));
         }
 
         [Category("Wizard")]
