@@ -471,7 +471,7 @@ namespace SampleTabbedGroups
             this.menuControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.menuControl1.Direction = Crownwood.Magic.Common.Direction.Horizontal;
             this.menuControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuControl1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.menuControl1.Font = new System.Drawing.Font("Segue UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
             this.menuControl1.HighlightTextColor = System.Drawing.SystemColors.MenuText;
             this.menuControl1.Name = "menuControl1";
             this.menuControl1.Size = new System.Drawing.Size(512, 25);
