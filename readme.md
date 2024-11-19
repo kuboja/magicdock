@@ -1,4 +1,3 @@
----------------------------------------
 Source: https://www.codeproject.com/Articles/4193/Magic-Library-Docking-Manager-Designer  
 Disclaimer: All information is provided "as is" without any warranty.  
 Upgrade: Upgraded to .NET 9 and everything seems to be working fine.
