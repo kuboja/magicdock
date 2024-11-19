@@ -7,7 +7,7 @@ Upgrade: Upgraded to .NET 9 and everything seems to be working fine.
 
 Original README:
 
-![Magic Logo](articles/images3/logo_full.jpg)
+![Magic Logo](Articles/images3/logo_full.jpg)
 
 Version 1.7
 -----------
